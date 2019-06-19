@@ -1,0 +1,35 @@
+@import "main";
+.navbar-custom {
+  background-color: $main-black-lighter;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: $main-white;
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+  color: $main-white;
+  content: "";
+  width: 0%;
+  transition: .5s;
+  -webkit-box-shadow: inset -7px -21px 0px -18px $main-invisible;
+  -moz-box-shadow: inset -7px -21px 0px -18px $main-invisible;
+  box-shadow: inset -7px -21px 0px -18px $main-invisible;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item:hover .nav-link {
+  width: 100%;
+  -webkit-box-shadow: inset -7px -21px 0px -18px $main-white;
+  -moz-box-shadow: inset -7px -21px 0px -18px $main-white;
+  box-shadow: inset -7px -21px 0px -18px $main-white;
+}
+.navbar-custom .nav-item.active .nav-link{
+  color: $main-white;
+}
+$dropdown-bg: $main-black-lighter;
+$dropdown-link-color: $main-white;
+$dropdown-link-active-bg:  $main-white-darker;
+$dropdown-link-hover-bg: $main-white;
+$dropdown-link-active-color: $main-white;
+
