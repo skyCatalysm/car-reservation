@@ -1,6 +1,7 @@
 @import "main";
 .navbar-custom {
-  background-color: $main-black-lighter;
+  transition: .5s;
+  background-color: $main-invisible;
 }
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
