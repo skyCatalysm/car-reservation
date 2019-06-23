@@ -5,9 +5,12 @@
 
 {% block body %}
     <section class="second">
-        <section id="first" class="d-flex justify-content-center align-items-center container">
+        <section class="d-flex justify-content-center align-items-center container">
+            <div class="d-none d-sm-none d-md-block">
+                <img src="http://pngimg.com/uploads/audi/audi_PNG1723.png" class="img-fluid car-displayed" alt="">
+            </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <form class="bg-black-light px-2 py-5">
                         <div class="row">
                             <div class="col-md-12">
@@ -18,7 +21,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-group input-group">
                                     <label class="form-group has-float-label">
                                         <input class="form-control text-light" type="text" placeholder="January 8, 2019"/>
@@ -26,7 +29,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-group input-group">
                                     <label class="form-group has-float-label">
                                         <input class="form-control text-light" type="text" placeholder="8:00 pm"/>
@@ -36,17 +39,77 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group input-group">
-                                    <button type="submit" class="btn btn-warning btn-block">Search</button>
+                                    <button type="submit" class="btn btn-warning btn-block font-weight-bold">Search</button>
                                 </div>
                             </div>
                         </div>
                     </form>
                 </div>
-                <div class="col-md-6 d-none d-sm-none d-md-block">
-                    <img style="width:400px" src="http://pngimg.com/uploads/audi/audi_PNG1723.png" class="img-fluid" alt="">
+            </div>
+            <a id="jump-one" class="arrow arrow-animate text-warning"><i class="fa fa-angle-down fa-4x" aria-hidden="true"></i></a>
+        </section>
+    </section>
+    <section class="first" id="target-one">
+        <section class="d-flex align-items-center container">
+            <div class="row mx-1">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12 bg-black-light pt-5 px-5">
+                            <h2 class="text-light text-center text-lg-left">About Us</h2>
+                        </div>
+                        <div class="col-md-12 bg-black-light pb-5 px-5">
+                            <p class="text-light text-center text-lg-left">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ipsum magnam
+                                necessitatibus omnis, rem repellat sunt veritatis? Aliquam aliquid cum cumque
+                                distinctio dolorem ex laboriosam molestias nulla odit quasi. Provident!
+                            </p>
+                        </div>
+                        <div class="col-md-12 bg-black-light px-5">
+                            <h2 class="text-light text-center text-lg-left">Yearly Statistics</h2>
+                        </div>
+                        <div class="col-md-12 bg-black-light pb-5 px-5">
+                            <div class="row">
+                                <div class="col text-light">
+                                    <div class="text-center stats-image">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="text-center stats-count">
+                                        3,757
+                                    </div>
+                                    <div class="text-center stats-description">
+                                        Website Visitors
+                                    </div>
+                                </div>
+                                <div class="col text-light">
+                                    <div class="text-center stats-image">
+                                        <i class="fas fa-hourglass-half"></i>
+                                    </div>
+                                    <div class="text-center stats-count">
+                                        3,757
+                                    </div>
+                                    <div class="text-center stats-description">
+                                        Reservations
+                                    </div>
+                                </div>
+                                <div class="col text-light">
+                                    <div class="text-center stats-image">
+                                        <i class="fas fa-car"></i>
+                                    </div>
+                                    <div class="text-center stats-count">
+                                        3,757
+                                    </div>
+                                    <div class="text-center stats-description">
+                                        Cars
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex">
+                    <img src="http://pngimg.com/uploads/volvo/volvo_PNG72.png" class="img-fluid align-self-center d-none d-sm-none d-md-block " alt="">
                 </div>
             </div>
         </section>
     </section>
-    <section class="first"></section>
 {% endblock %}

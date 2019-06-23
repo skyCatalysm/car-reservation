@@ -14,4 +14,11 @@ import 'bootstrap';
 // uncomment if you have legacy code that needs global variables
 //global.$ = $;
 
-import ('./navbar.js');
+import ('./navbar-scroll-animation.js');
+import ('./animated-arrow-down')
+
+//jump js
+import jump from 'jump.js';
+document.getElementById('jump-one').addEventListener('click', function (event) {
+    jump('#target-one')
+});

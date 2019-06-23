@@ -1,0 +1,26 @@
+//Splitting html page into sections//
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: black;
+}
+section {
+  height: 100vh;
+  width: 100%;
+}
+section.first{
+  background: url("https://images-eds-ssl.xboxlive.com/image?url=8Oaj9Ryq1G1_p3lLnXlsaZgGzAie6Mnu24_PawYuDYIoH77pJ.X5Z.MqQPibUVTcauaXnYBPOlCJ.KgkqmidmFRSX2oAUWR7HSl9mfBq6pADo4SGURINPXwKZC_tx3a70_HaZt4AAB0.zWMcdXmhbskRfR4wj4AOPM2fneYxvxzVKEFboSLksMpz1xv.i4fVBIs6n9R_b1Qdz4LMobPsWCXUGMhArYtJh4ZLHV1sZMY-&h=1080&w=1920&format=jpg")  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+section.second {
+  background: url("https://images.pexels.com/photos/531321/pexels-photo-531321.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

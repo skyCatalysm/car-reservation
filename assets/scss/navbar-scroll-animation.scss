@@ -1,0 +1,35 @@
+//Animate the nav bar on scroll and on collapse
+
+//custom background color//
+
+//#navbarSupportedContent
+//use the id "navbarSupportedContent" for the nav collapse div
+
+//#nav-bar
+//use the id "nav-bar" for the id of the parent <nav>
+
+//#logo
+//use the id "logo" for the nav logo
+.nav-logo-large{
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  height: 5rem;
+}
+.nav-logo-default{
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  height: 3rem;
+}
+.navbar-custom-scrolled {
+  transition: .5s;
+  background-color: $main-black;
+}
+.navbar-brand{
+  width: 7rem;
+}
