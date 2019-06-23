@@ -14,11 +14,23 @@ import 'bootstrap';
 // uncomment if you have legacy code that needs global variables
 //global.$ = $;
 
+//aos animation
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
 import ('./navbar-scroll-animation.js');
-import ('./animated-arrow-down')
+import ('./animated-arrow-down.js');
 
 //jump js
-import jump from 'jump.js';
-document.getElementById('jump-one').addEventListener('click', function (event) {
-    jump('#target-one')
-});
+import ('./homepage-jump.js');
+
+let changeImage = document.getElementsByClassName('change-showcase-image');
+for(let i = 0; i < changeImage.length; i++) {
+    (function(index) {
+        changeImage[index].addEventListener('click', function (event)  {
+            document.getElementById("showcase-title").innerHTML = changeImage[index].alt;
+            document.getElementById("showcase-image").src = changeImage[index].src;
+        })
+    })(i);
+}
