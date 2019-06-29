@@ -11,7 +11,6 @@
 .navbar-custom .navbar-nav .nav-link {
   color: $main-white;
   content: "";
-  width: 0%;
   transition: .5s;
   -webkit-box-shadow: inset -7px -21px 0px -18px $main-invisible;
   -moz-box-shadow: inset -7px -21px 0px -18px $main-invisible;
@@ -19,7 +18,6 @@
 }
 /* change the color of active or hovered links */
 .navbar-custom .nav-item:hover .nav-link {
-  width: 100%;
   -webkit-box-shadow: inset -7px -21px 0px -18px $main-white;
   -moz-box-shadow: inset -7px -21px 0px -18px $main-white;
   box-shadow: inset -7px -21px 0px -18px $main-white;
