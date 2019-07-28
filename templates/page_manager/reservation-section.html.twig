@@ -1,0 +1,92 @@
+{% extends 'page_manager/_base_page_manager.html.twig' %}
+{% block title %}
+    Reservation Section
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <form method="POST" action="{{ path('upload_reservation') }}" enctype="multipart/form-data">
+        <section style="margin-top: 10rem" class="mb-3">
+            <div class="row border border-dark rounded bg-black-light p-2">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 mb-2">
+                            <small class="text-light">Update Reservation Section</small>
+                        </div>
+                        <div class="col-12 px-2">
+                            <section class="p-3 mb-2">
+                                <div class="row">
+                                    <div class="offset-3 col-6">
+                                        <h5 class="text-secondary">
+                                            Logo
+                                        </h5>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <img class="img-fluid my-3" style="height: 5rem;" src="{{ asset('img/'~ reservationSectionLogo.content) }}" alt="">
+                                    </div>
+                                    <div class="offset-3 col-6">
+                                        <div class="custom-file">
+                                            <input type="file" name="logo" class="custom-file-input">
+                                            <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                            <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="p-3 mb-2 ">
+                                <div class="row">
+                                    <div class="offset-3 col-6">
+                                        <h5 class="text-secondary">
+                                            Featured Car
+                                        </h5>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <img class="img-fluid my-3" style="height: 5rem;" src="{{ asset('img/'~ reservationSectionFeaturedCar.content) }}" alt="">
+                                    </div>
+                                    <div class="offset-3 col-6">
+                                        <div class="custom-file">
+                                            <input type="file" name="featured-car" class="custom-file-input">
+                                            <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                            <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="p-3 mb-2">
+                                <div class="row">
+                                    <div class="offset-3 col-6">
+                                        <h5 class="text-secondary">
+                                            Button Color
+                                        </h5>
+                                    </div>
+                                    <div class="offset-3 col-6 text-center">
+                                        <span class="btn my-3 {{ reservationSectionSearchBtn.content }} rounded font-weight-bold d-flex justify-content-center reservation-search">search</span>
+                                    </div>
+                                    <div class="offset-3 col-6">
+                                        <div class="form-group">
+                                            <label for="formSelect" class="text-secondary">Choose color</label>
+                                            <select name="sectionButton" class="form-control text-light" id="formSelect">
+                                                <option value="btn-primary">Blue</option>
+                                                <option value="btn-danger">Red</option>
+                                                <option value="btn-success">Green</option>
+                                                <option value="btn-warning">Yellow</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="row">
+                                <div class="offset-3 col-6 mt-3 text-center">
+                                    <button type="submit" class="btn-primary btn-lg btn btn-block my-3">
+                                        Update
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </form>
+    </div>
+{% endblock %}

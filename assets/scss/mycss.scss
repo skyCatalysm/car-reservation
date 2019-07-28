@@ -32,3 +32,20 @@
 .stats-description{
   font-size:1rem;
 }
+
+.reservation-thumbnail{
+  position: relative; left: 0; top: 0;
+
+  .reservation-bg{
+    width:50rem;position: relative; left: 0; top: 0;
+  }
+  .reservation-featured-car{
+    height:40%; position: absolute; right: 20%; top: 35%;
+  }
+  .reservation-logo{
+    width:3%; position: absolute; right: 94%; top: 2%;
+  }
+  .reservation-search{
+    width:20%;height:4%;font-size: 1%;  position: absolute; right: 51.5%; top: 57%;
+  }
+}

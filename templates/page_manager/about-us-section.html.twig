@@ -1,0 +1,50 @@
+{% extends 'page_manager/_base_page_manager.html.twig' %}
+
+{% block title %}
+    About Us Section
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <form method="POST" action="{{ path('upload_about_us') }}" enctype="multipart/form-data">
+            <section style="margin-top: 10rem" class="mb-3">
+                <div class="row border border-dark rounded bg-black-light p-2">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12 mb-2">
+                                <small class="text-light">Update About Us Section</small>
+                            </div>
+                            <div class="offset-3 col-6">
+                                <h5 class="text-secondary">
+                                    Featured Car
+                                </h5>
+                            </div>
+                            <div class="col-12 text-center">
+                                <img class="img-fluid my-3" style="height: 5rem;" src="{{ asset('img/'~ aboutFeaturedCar.content) }}" alt="">
+                            </div>
+                            <div class="offset-3 col-6">
+                                <div class="custom-file">
+                                    <input type="file" name="featuredCar" class="custom-file-input">
+                                    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                    <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                </div>
+                            </div>
+                            <div class="offset-3 col-6 mt-3">
+                                <div class="form-group">
+                                    <label class="text-secondary" for="about-us">About Us:</label>
+                                    <textarea name="aboutContent" class="form-control text-light" rows="5" maxlength="500" id="about-us">{{ aboutUsContent.content }}</textarea>
+                                </div>
+                            </div>
+                            <div class="offset-3 col-6 mt-3 text-center">
+                                <button type="submit" class="btn-lg btn-primary btn btn-block my-3">
+                                    Update
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </section>
+        </form>
+    </div>
+{% endblock %}
+

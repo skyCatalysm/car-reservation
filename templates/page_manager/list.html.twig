@@ -1,0 +1,55 @@
+{% extends 'page_manager/_base_page_manager.html.twig' %}
+{% block title %}
+    Main Page Content List
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <section style="margin-top: 10rem">
+        <div class="row border border-dark rounded bg-black-light p-2">
+            <div class="col-12">
+                <div class="row p-3">
+                    <div class="col-12">
+                        <small class="text-light">Homepage Manager</small>
+                    </div>
+{#                    Reservation Section#}
+{#                    Reservation Section#}
+                    <div class="col-lg-6">
+                        <div class="row p-3 border border-light  rounded p-2 m-1 bg-black-light">
+                            <div class="col-12 d-flex justify-content-center">
+                                <h3 class="text-light">
+                                    Reservation Section
+                                </h3>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center mb-2">
+                                <div class="reservation-thumbnail">
+                                <img class="img-fluid border border-light reservation-bg" src="{{ asset('img/reservation-img.JPG') }}" alt="">
+                                <img class="img-fluid reservation-featured-car" src="{{ asset('img/'~ reservationSectionFeaturedCar.content) }}" alt="">
+                                <img class="img-fluid reservation-logo" src="{{ asset('img/'~ reservationSectionLogo.content) }}" alt="">
+                                    <span class="{{ reservationSectionSearchBtn.content }} rounded font-weight-bold d-flex justify-content-center reservation-search">search</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+{#                    About Us Section#}
+{#                    About Us Section#}
+                    <div class="col-lg-6">
+                        <div class="row p-3 border border-light  rounded p-2 m-1 bg-black-light">
+                            <div class="col-12 d-flex justify-content-center">
+                                <h3 class="text-light">
+                                    Reservation Section
+                                </h3>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center mb-2">
+                                <div class="reservation-thumbnail">
+                                <img class="img-fluid border border-light reservation-bg" src="{{ asset('img/about-us-bg1.jpg') }}" alt="">
+                                <img class="img-fluid" style="height:40%; position: absolute; right: 5%; top: 33%;"  src="{{ asset('img/'~ aboutFeaturedCar.content) }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

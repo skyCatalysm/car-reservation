@@ -1,0 +1,36 @@
+<nav class="navbar navbar-custom navbar-expand-lg fixed-top pt-3 navbar-custom-scrolled" id="nav-bar">
+    <a class="navbar-brand" href="{{ path('homepage') }}">
+        <img src="https://www.carlogos.org/logo/BMW-logo-2000-2048x2048.png" alt="BMW" class="nav-logo nav-logo-default img-fluid" id="logo">
+    </a>
+    <button id="nav-bg-change" class="navbar-toggler text-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-grip-lines"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active nav-link-jump mx-1">
+                <a class="nav-link border border-light rounded" href="{{ path('homepage')}}"><i class="fas fa-user"></i>&nbsp;Homepage<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active nav-link-jump mx-1">
+                <a href="{{ path('homepage_manager') }}" class="nav-link border border-light rounded"><i class="far fa-list-alt"></i>&nbsp;Overview</a>
+            </li>
+            <li class="nav-item active nav-link-jump mx-1">
+                <a href="{{ path('reservation_section')}}" class="nav-link border border-light rounded"><i class="fas fa-business-time"></i>&nbsp;Reservation&nbsp;Section</a>
+            </li>
+            <li class="nav-item active nav-link-jump mx-1">
+                <a href="{{ path('about_us_section')}}" class="nav-link border border-light rounded"><i class="fas fa-info-circle"></i>&nbsp;About&nbsp;Us&nbsp;Section</a>
+            </li>
+            <li class="nav-item active nav-link-jump mx-1">
+                <a href="{{path('vehicle_categories_section')}}" class="nav-link border border-light rounded"><i class="fas fa-car"></i>&nbsp;Vehicle&nbsp;Categories&nbsp;Section</a>
+            </li>
+            <li class="nav-item active nav-link-jump mx-1">
+                <a class="nav-link border border-light rounded"><i class="fas fa-columns"></i>&nbsp;Footer&nbsp;Section</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <a href="{{path('app_logout')}}">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="button">Logout</button>
+            </a>
+        </form>
+    </div>
+</nav>

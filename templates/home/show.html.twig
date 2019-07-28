@@ -2,12 +2,12 @@
 
 {% block title %}Homepage{% endblock %}
 
-
 {% block body %}
+
     <section class="first">
         <section class="d-flex justify-content-center align-items-center container">
             <div class="d-none d-sm-none d-md-block" >
-                <img src="http://pngimg.com/uploads/audi/audi_PNG1723.png" class="img-fluid car-displayed" alt="">
+                <img src="{{ asset('img/'~ reservationSectionFeaturedCar.content) }}" class="img-fluid car-displayed" alt="">
             </div>
             <div class="row">
                 <div class="col-lg-6">
@@ -39,7 +39,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group input-group">
-                                    <button type="submit" class="btn btn-warning btn-block font-weight-bold">Search</button>
+                                    <button type="submit" class="btn {{ reservationSectionSearchBtn.content }} btn-block font-weight-bold">Search</button>
                                 </div>
                             </div>
                         </div>
@@ -59,9 +59,7 @@
                         </div>
                         <div class="col-md-12 bg-black-light pb-5 px-5">
                             <p class="text-light text-center text-lg-left" data-aos="fade" data-aos-delay="100">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ipsum magnam
-                                necessitatibus omnis, rem repellat sunt veritatis? Aliquam aliquid cum cumque
-                                distinctio dolorem ex laboriosam molestias nulla odit quasi. Provident!
+                                {{ aboutUsContent.content }}
                             </p>
                         </div>
                         <div class="col-md-12 bg-black-light px-5">
@@ -107,7 +105,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 d-flex">
-                    <img src="http://pngimg.com/uploads/volvo/volvo_PNG72.png" class="img-fluid align-self-center d-none d-sm-none d-md-block" alt="" data-aos="zoom-out" data-aos-delay="600">
+                    <img src="{{ asset('img/'~ aboutFeaturedCar.content) }}" class="text-md-center font-weight-bold img-fluid align-self-center d-none d-sm-none d-md-block" alt="" data-aos="zoom-out" data-aos-delay="600">
                 </div>
             </div>
         </section>
@@ -123,24 +121,11 @@
                                 non praesentium ratione similique vel voluptatibus. Ab aliquam dolore expedita sint sunt? Doloremque
                                 hic modi nulla quas temporibus?</p>
                         </div>
+                        {% for cars in vehicleCategory %}
                         <div class="col-3 bg-black-light m-1" data-aos="fade" data-aos-delay="200">
-                            <img src="https://www.hertzphilippines.com/wp-content/uploads/2019/06/2016_Ford_Explorer-623x299.png" class="img-fluid py-4 change-showcase-image" alt="Premium SUV">
+                            <img src="{{ asset('img/'~ cars.content) }}" class="img-fluid py-4 change-showcase-image" alt="{{ cars.title }}">
                         </div>
-                        <div class="col-3 bg-black-light m-1" data-aos="fade" data-aos-delay="200">
-                            <img src="https://www.hertzphilippines.com/wp-content/uploads/2019/04/hertz-midsize-SUV-798x466.png" class="img-fluid py-4 change-showcase-image" alt="Mid-size Wagon">
-                        </div>
-                        <div class="col-3 bg-black-light m-1" data-aos="fade" data-aos-delay="200">
-                            <img src="https://www.hertzphilippines.com/wp-content/uploads/2019/01/wigo-798x466.png" class="img-fluid py-4 change-showcase-image" alt="Mini Sedan">
-                        </div>
-                        <div class="col-3 bg-black-light m-1" data-aos="fade" data-aos-delay="200">
-                            <img src="https://www.hertzphilippines.com/wp-content/uploads/2017/10/intermediate-sedan-798x466.png" class="img-fluid py-4 change-showcase-image" alt="Intermediate Sedan">
-                        </div>
-                        <div class="col-3 bg-black-light m-1" data-aos="fade" data-aos-delay="200">
-                            <img src="https://www.hertzphilippines.com/wp-content/uploads/2017/09/hertz-economy-sedan-798x466.png" class="img-fluid py-4 change-showcase-image" alt="Economy Sedan">
-                        </div>
-                        <div class="col-3 bg-black-light m-1" data-aos="fade" data-aos-delay="200">
-                            <img src="https://www.hertzphilippines.com/wp-content/uploads/2017/08/hertz-full-size-wagon-798x466.png" class="img-fluid py-4 change-showcase-image" alt="Full Size Wagon">
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="col-md-4 d-flex">

@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Register
+{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('app-login-register') }}
+{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block body %}
+    <section class="first">
+        <section class="d-flex justify-content-center align-items-center container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <form method="post" class="bg-black-light px-2 py-5">
+                        <img src="https://www.carlogos.org/logo/BMW-logo-2000-2048x2048.png" alt="BMW"
+                             class="nav-logo nav-logo-large" style="position: absolute; top:-15%; left: 43%;">
+                        <div class="row">
+                            {{ form_start(registrationForm) }}
+                            <div class="col-md-12">
+                                {{ form_errors(registrationForm.email) }}
+                                <div class="form-group input-group">
+                                    <label class="form-group has-float-label">
+                                        {{ form_widget(registrationForm.email, {
+                                            attr:{
+                                                'class': 'form-control text-light',
+                                                'placeholder': 'please enter your username...',
+                                                'autofocus': true,
+                                            }
+                                        }) }}<span class="text-light">Username</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                {{ form_errors(registrationForm.password) }}
+                                <div class="form-group input-group">
+                                    <label class="form-group has-float-label">
+                                        {{ form_widget(registrationForm.password, {
+                                            attr:{
+                                                'class': 'form-control text-light',
+                                                'placeholder': 'please enter your password...',
+                                            }
+                                        }) }}
+                                        <span class="text-light">Password</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group input-group">
+                                    <button type="submit" class="btn btn-primary btn-block font-weight-bold">Register</button>
+                                </div>
+                            </div>
+                            {{ form_end(registrationForm) }}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </section>
+{% endblock %}
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app-login-register') }}
+        {% endblock %}
