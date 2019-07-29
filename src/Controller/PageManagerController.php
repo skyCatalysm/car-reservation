@@ -62,7 +62,7 @@ class PageManagerController extends AbstractController
      */
     public function ReservationUpload(Request $request, ReservationSectionRepository $reservationSectionRepository, EntityManagerInterface $em)
     {
-        $destination = $this->getParameter('kernel.project_dir').'/public/img';
+        $destination = $this->getParameter('kernel.project_dir').'/public_html/img';
 
         if ($uploadedFile = $request->files->get('logo')){
             /** @var UploadedFile $uploadedFile */
@@ -106,13 +106,15 @@ class PageManagerController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/admin/about-us-section", name="about_us_section")
      */
-    public function AboutUsSection(AboutUsSectionRepository $aboutUsSectionRepository)
+    public function AboutUsSection(AboutUsSectionRepository $aboutUsSectionRepository,ReservationSectionRepository $reservationSectionRepository)
     {
+        $reservationSectionLogo = $reservationSectionRepository->findOneBy(['title' => 'logo' ]);
         $aboutUsContent = $aboutUsSectionRepository->findOneBy(['title'=>'about-us']);
         $aboutFeaturedCar = $aboutUsSectionRepository->findOneBy(['title'=>'about-us-featured-car']);
         return $this->render('page_manager/about-us-section.html.twig',[
             'aboutUsContent'=> $aboutUsContent,
             'aboutFeaturedCar'=> $aboutFeaturedCar,
+            'reservationSectionLogo'=> $reservationSectionLogo,
         ]);
     }
 
@@ -122,7 +124,7 @@ class PageManagerController extends AbstractController
      */
     public function AboutUsUpload(Request $request, AboutUsSectionRepository $aboutUsSectionRepository, EntityManagerInterface $em)
     {
-        $destination = $this->getParameter('kernel.project_dir').'/public/img';
+        $destination = $this->getParameter('kernel.project_dir').'/public_html/img';
         if ($uploadedFile = $request->files->get('featuredCar')){
             /** @var UploadedFile $uploadedFile */
             $aboutUsFeaturedCar = $aboutUsSectionRepository->findOneBy(['title' => 'about-us-featured-car' ]);
@@ -153,12 +155,13 @@ class PageManagerController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/admin/vehicle-categories-section", name="vehicle_categories_section")
      */
-    public function VehicleCategoriesSection(VehicleCategoryRepository $vehicleCategoryRepository)
+    public function VehicleCategoriesSection(VehicleCategoryRepository $vehicleCategoryRepository, ReservationSectionRepository $reservationSectionRepository)
     {
         $vehicles = $vehicleCategoryRepository->findAll();
-
+        $reservationSectionLogo = $reservationSectionRepository->findOneBy(['title' => 'logo' ]);
         return $this->render('page_manager/vehicle-category-section.html.twig',[
             'vehicleCategory' => $vehicles,
+            'reservationSectionLogo'=> $reservationSectionLogo,
         ]);
     }
 
@@ -168,7 +171,7 @@ class PageManagerController extends AbstractController
      */
     public function VehicleCategoriesUpload(Request $request, EntityManagerInterface $em)
     {
-        $destination = $this->getParameter('kernel.project_dir').'/public/img';
+        $destination = $this->getParameter('kernel.project_dir').'/public_html/img';
         if (($uploadedFile = $request->files->get('file'))&&($title = $request->get('title'))&&($description = $request->get('description'))){
             $originalFilename = pathinfo($uploadedFile->getClientOriginalName(), PATHINFO_FILENAME);
             $newFilename = Urlizer::urlize($originalFilename).'-'.uniqid().'.'.$uploadedFile->guessExtension();

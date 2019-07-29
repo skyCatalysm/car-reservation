@@ -1,0 +1,36 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~app~app-admin-page-manager~app-login-register.js",
+        "/build/vendors~app.js",
+        "/build/app.js"
+      ],
+      "css": [
+        "/build/vendors~app.css",
+        "/build/app.css"
+      ]
+    },
+    "app-login-register": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~app~app-admin-page-manager~app-login-register.js",
+        "/build/app-login-register.js"
+      ],
+      "css": [
+        "/build/app-login-register.css"
+      ]
+    },
+    "app-admin-page-manager": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~app~app-admin-page-manager~app-login-register.js",
+        "/build/app-admin-page-manager.js"
+      ],
+      "css": [
+        "/build/app-admin-page-manager.css"
+      ]
+    }
+  }
+}
